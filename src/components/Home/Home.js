@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './Home.css';
-import Data from '../../assets/Data.json';
+import Data from '../../assets/Data';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
@@ -61,8 +61,8 @@ class Home extends Component {
                 id: 0,
                 title: 'All Day Event very long title',
                 allDay: true,
-                start: new Date(2015, 3, 0),
-                end: new Date(2015, 3, 1),
+                start: new Date(2020, 7, 12, 10, 30, 0, 0),
+                end: new Date(2020, 7, 12, 12, 32, 0, 0),
             },
             {
                 id: 14,

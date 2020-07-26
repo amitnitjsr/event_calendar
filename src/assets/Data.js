@@ -1,4 +1,4 @@
-{
+export default {
     "ok": true,
     "members": [
         {
@@ -53,8 +53,8 @@
                     "end_time": "Jul 29 2020 2:00PM"
                 },
                 {
-                    "start_time": "Jul 1 2020  5:33PM",
-                    "end_time": "Jul 1 2020 8:02PM"
+                    "start_time": new Date("Jul 1 2020 "),
+                    "end_time": new Date("Jul 1 2020 ")
                 }
             ]
         }
