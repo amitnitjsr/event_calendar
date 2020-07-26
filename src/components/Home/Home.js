@@ -61,7 +61,6 @@ class Home extends Component {
                 id: 0,
                 title: 'All Day Event very long title',
                 allDay: true,
-                // var dt = new Date(year, month[, date, hour, minute, second, millisecond]);
                 start: new Date(2020, 7, 12, 10, 30, 0, 0),
                 end: new Date(2020, 7, 12, 12, 32, 0, 0),
             },
@@ -79,38 +78,21 @@ class Home extends Component {
             },
         ]
         this.state = {
-            name: 'React',
-            open: false,
-            selectedUser: null,
-            id: null,
-            activeUser: null,
             activity_periods: null,
             showPopup: false,
+            active_user: '',
             events
         };
     }
 
-    selectHandler = (value) => {
-        if (value !== 'Select Users') {
-            this.setState({ id: value }, () => {
-                let user = Data.members.filter((val) => val.id === this.state.id);
-                this.setState({ activeUser: user[0].real_name, events: user[0].activity_periods }, () => {
-                    console.log('events', this.state.events);
-                    console.log('date', new Date("Jul 6 2020 1:54"))
-                })
-                this.popupToggle();
-            });
-        }
+    // Click on any Data List 
+    selectUserHandler = (value) => {
+        let user = Data.members.filter((val) => val.id === value);
+        this.setState({ events: user[0].activity_periods, active_user: user[0].real_name });
+        this.popupToggle();
     }
 
-    selectActivityHandler = (value) => {
-
-        let user = Data.members.filter((val) => val.id === this.state.id);
-        console.log('user', user)
-        this.setState({ selectedUser: user });
-
-    }
-
+    // Opening and Closing popup modal 
     popupToggle = () => {
         this.setState((preState) => {
             return { showPopup: !preState.showPopup }
@@ -118,11 +100,11 @@ class Home extends Component {
     }
 
     render() {
-
+        //popup Modal 
         let showActivity = (
-            <Dialog open={this.state.showPopup} fullScreen={true} maxWidth={true} onClose={this.popupToggle}>
+            <Dialog open={this.state.showPopup} fullScreen={true} onClose={this.popupToggle}>
                 <DialogTitle onClose={this.popupToggle} >
-                    {'hello'}
+                    <span style={{ color: 'black' }}>{'Selected User: ' + this.state.active_user}</span>
                 </DialogTitle>
                 <DialogContent>
                     <div style={{ height: '500pt' }}>
@@ -140,17 +122,22 @@ class Home extends Component {
 
         return (
             <div className="style-top">
-                <h1>Users List</h1>
-                {Data.members ? Data.members.map((val) => {
-                    return (
-                        <div key={val.id} className="user-List"
-                            onClick={() => this.selectHandler(val.id)} >
-                            {val.real_name}
-                        </div>
-                    )
-                }) : null}
-
                 {showActivity}
+
+                <div class="card">
+                    <div class="container">
+                        <h1>Users List</h1>
+                        {Data.members ? Data.members.map((val) => {
+                            return (
+                                <div key={val.id} className="user-List"
+                                    onClick={() => this.selectUserHandler(val.id)} >
+                                    {val.real_name}
+                                </div>
+                            )
+                        }) : null}
+                    </div>
+                </div>
+
             </div>
         )
     }
