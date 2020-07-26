@@ -95,7 +95,8 @@ class Home extends Component {
             this.setState({ id: value }, () => {
                 let user = Data.members.filter((val) => val.id === this.state.id);
                 this.setState({ activeUser: user[0].real_name, events: user[0].activity_periods }, () => {
-                    console.log('events', this.state.events)
+                    console.log('events', this.state.events);
+                    console.log('date', new Date(new Date().setHours(new Date().getHours() - 3)))
                 })
                 this.popupToggle();
             });
