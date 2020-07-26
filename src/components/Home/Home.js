@@ -61,6 +61,7 @@ class Home extends Component {
                 id: 0,
                 title: 'All Day Event very long title',
                 allDay: true,
+                // var dt = new Date(year, month[, date, hour, minute, second, millisecond]);
                 start: new Date(2020, 7, 12, 10, 30, 0, 0),
                 end: new Date(2020, 7, 12, 12, 32, 0, 0),
             },
