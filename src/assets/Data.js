@@ -7,16 +7,16 @@ export default {
             "tz": "America/Los_Angeles",
             "activity_periods": [
                 {
-                    "start_time": "Feb 1 2020  1:33PM",
-                    "end_time": "Feb 1 2020 1:54PM"
+                    "start_time": new Date("Jul 6 2020  10:33"),
+                    "end_time": new Date("Jul 6 2020  12:33")
                 },
                 {
-                    "start_time": "Mar 1 2020  11:11AM",
-                    "end_time": "Mar 1 2020 2:00PM"
+                    "start_time": new Date("Jul 24 2020  1:33"),
+                    "end_time": new Date("Jul 24 2020  4:33")
                 },
                 {
-                    "start_time": "Mar 16 2020  5:33PM",
-                    "end_time": "Mar 16 2020 8:02PM"
+                    "start_time": new Date("Jul 26 2020  12:33"),
+                    "end_time": new Date("Jul 26 2020  14:33")
                 }
             ]
         },
@@ -26,16 +26,16 @@ export default {
             "tz": "Asia/Kolkata",
             "activity_periods": [
                 {
-                    "start_time": "Feb 1 2020  1:33PM",
-                    "end_time": "Feb 1 2020 1:54PM"
+                    "start_time": new Date("Jul 6 2020  11:33"),
+                    "end_time": new Date("Jul 6 2020  12:33")
                 },
                 {
-                    "start_time": "Mar 1 2020  11:11AM",
-                    "end_time": "Mar 1 2020 2:00PM"
+                    "start_time": new Date("Jul 15 2020  10:33"),
+                    "end_time": new Date("Jul 15 2020  12:33")
                 },
                 {
-                    "start_time": "Mar 16 2020  5:33PM",
-                    "end_time": "Mar 16 2020 8:02PM"
+                    "start_time": new Date("Jul 20 2020  12:33"),
+                    "end_time": new Date("Jul 20 2020  14:33")
                 }
             ]
         },
@@ -45,16 +45,16 @@ export default {
             "tz": "Asia/Kolkata",
             "activity_periods": [
                 {
-                    "start_time": "Jul 6 2020  1:33PM",
-                    "end_time": "Jul 6 2020 1:54PM"
+                    "start_time": new Date("Jul 6 2020  10:33"),
+                    "end_time": new Date("Jul 6 2020  12:33")
                 },
                 {
-                    "start_time": new Date('Sun Jul 24 2020 11:37:19 GMT+0530 (India Standard Time)'),
-                    "end_time": new Date('Sun Jul 24 2020 12:37:19 GMT+0530 (India Standard Time)')
+                    "start_time": new Date("Jul 24 2020  1:33"),
+                    "end_time": new Date("Jul 24 2020  4:33")
                 },
                 {
-                    "start_time": new Date('Sun Jul 26 2020 14:37:19 GMT+0530 (India Standard Time)'),
-                    "end_time": new Date('Sun Jul 26 2020 16:37:19 GMT+0530 (India Standard Time)')
+                    "start_time": new Date("Jul 26 2020  12:33"),
+                    "end_time": new Date("Jul 26 2020  14:33")
                 }
             ]
         }
